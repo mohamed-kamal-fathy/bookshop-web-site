@@ -1,0 +1,203 @@
+      /************************************comman**************************/
+      *{
+        margin: 0;
+        padding: 0;
+    /*   to take size from width not add to it */
+        box-sizing: border-box; 
+    }
+    
+    
+    .hover-opacity{/*لتحويل الاوباسيتي في جزء من الثانية*/
+       transition: opacity 2s; /*للخاصية فقط وليس للصفحة كلها بخصوص الوقت*/
+    }
+    .hover-opacity:hover{
+        opacity: 0.6;
+    }
+    .container{/*لاخذ مسافات من اليمين والشمال والنص يبقي في منتصف الصفحة*/
+        width: 80%;
+        margin: auto;
+    }
+    body{
+        font-family: 'Open Sans', sans-serif;
+       
+        
+    }
+    .clear{
+        clear: both; /*to make parents  feel to his children and see them*/
+    }
+     h1, h2, h3, h4, h5, h6{
+     font-family: "Poppins", sans-serif;
+        margin-bottom: .5rem;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+    /*h1  h2 h3 h4 h5 h6 button{
+       
+    }*/
+    a {
+        text-decoration: none; /*بتشيل الخطوط ال تحت اللينك*/
+    }
+              /************************************end common**************************/
+               /*********************************************************************/
+               
+                           /****************** header section ***************/
+    .header{
+        /*background:#e6e6e6;*/
+        height: 90px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;/*جعل الهيدر فوق الباك جراوند*/
+    }
+    .header .logo{
+        width:25%;
+        float: left;
+        height: 200px;
+        border-radius: 10px;
+        
+       
+    }
+    .header .logo img{
+        /*width: %;*/
+        height:170%;
+        float: left;
+        height: 130px;
+        
+    }
+    .header .parts{
+        width: 75%;
+        float: left;
+        list-style: none;/*بتشيل النقط السودة*/
+        text-align: left;  
+    }
+    .header .parts > li{/*ال هيتطبق علي ولادها بس*/
+       display: inline-block;
+       text-align: center;
+       
+    }
+    .header .parts > li > a{
+     color: black;
+     display:block;
+     padding: 20px 15px ;  
+    }
+    .header .parts > li > a:hover,.header .parts > li > a.active {
+        background:#d2f8e8;
+        
+    }
+    
+    .header .parts > li > a:after ,.header .parts li > a.active:after {
+     content: "";
+     display:block;
+     height: 3px;
+     background-color:#006befcf ;
+     margin-top: 2px;
+     transition: width 0.5s;
+    }
+    .header .parts > li > a.active:after {
+     width: 100%;
+    }
+    .header .parts > li > a:after {
+     width: 0;
+    }
+    .header .parts > li > a:hover:after{
+     
+     width: 100%;
+     background: #e5938d;
+     
+    }
+    .blog{
+        position: relative;
+    }
+    .blog-menu{
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        background: #fdf;
+        text-align: left;
+       /* left: -30%;*/
+        top: 80%;
+        /*لاخفاء القائمة المنسدلة */
+        opacity: 0; 
+        visibility: hidden;
+        transition: opacity 0.5s , visibility 0.5s ; /*شكل للقائمة المنسدلة*/
+        list-style: none;
+    }
+    .blog-menu a {
+        
+        background: #90a7fe;
+        display: block;
+        padding: 10px;
+    
+    }
+    .blog:hover .blog-menu{
+        opacity: 1; 
+        visibility: visible;
+    }
+     .blog-menu  a:hover{
+        background: #fff;
+    }
+    
+    
+                       /****************** end header section ***************/
+             /*********************************************************************/        
+                       
+                        /******************* home section ***************/
+     .home{
+        height: 100vh;
+        background-image: url(images/back.jpg);
+        background-size: cover; /*الصورة علي قد مساحة الصفحة*/
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .home-content{
+      
+        position: absolute;
+        right: 50%;
+        top: 65%;
+        transform: translate(0,-50%);/* %برك الكلام لفوق 50  */
+        text-align: center;
+        
+        
+    }
+    .home .message{
+        color:#fff;
+        font-size:4rem;
+        padding-bottom: 10px;
+        
+    }
+    .home .description{
+       
+        margin: 10px 0px ;
+        color:#051c4f;
+        letter-spacing: 1.7px;/*مسافة بين الحروف*/
+        line-height: 1.5px; /*مسافة بين السطور*/   
+    }
+    .home .btn{
+        min-width: 300px;
+        padding: 15px 0;
+        border-radius: 70px;
+        margin: 100px 40px;
+        border: 0;
+        cursor: pointer;
+        font-size: 20px;    
+    }
+    .home .button-start{
+        margin-right: 10px;
+        background-color: black;
+        color: white;
+    }
+    .home .button-book{
+        margin-right: 10px;
+        background-color: #3573f9;
+        color: white;
+    }
+    .home .button-book:hover{
+     
+     background-color: green;
+    }
+    .home .button-start:hover{
+     
+     background-color: white;
+     color: black;
+    }
+                /******************end home section ***************/
+         /*********************************************************************/    
